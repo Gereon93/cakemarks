@@ -1,10 +1,28 @@
 /* Copyright (c) 2011 Martin Ueding <dev@martin-ueding.de> */
+/*-----------------CSS RESET------------*/
+*{
+    padding:0;/*innenabstand*/
+    margin:0; /*aussenabstand*/
+    font-size:100%;
+    font-weight: normal;
+}
+ul,ol{
+    list-style:none;
+}
+b,strong{
+    font-weight:bold;
+}
+img, a img{
+    border:none;
+}
+/*-----------------CSS RESET ENDE ------------*/
 
 body {
 font-family:Arial,Helvetica,sans-serif;
 	margin: 0px;
 	padding: 0px;
 	font-size: 12px;
+	background-color: rgb(255,238,214);
 }
 
 #toolbar, div.toolbar_handle {
@@ -24,6 +42,101 @@ font-family:Arial,Helvetica,sans-serif;
 	height: 25px;
 }
 
+
+/*---------------Formular--------------*/
+form {
+  background: #fff url(comments-bg.png) no-repeat 0 0;
+  padding: 3px 0 0;
+  margin: 10px auto;
+  width: 520px;
+}
+fieldset {
+  background: #fff url(comments-bg.png) no-repeat 0 100%;
+  border: none;
+  margin: 0;
+  padding: 10px 20px 25px;
+}
+ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+li {
+  float: left;
+  padding: 10px;
+}
+li.last {
+  float: none;
+  clear: both;
+text-align: right;
+}
+fieldset legend {
+  font-weight: bold;
+  font-size: 22px;
+  margin:15px 0 0 6px;
+}
+label {
+  display:block;
+  cursor: pointer;
+  font-weight: bold;
+  line-height: 24px;
+}
+
+input, textarea {
+  background-color: #fff;
+  color: #4d4d4d;
+  border: 1px solid #c4c4c4;
+  font: 13px Helvetica, Arial, "Nimbus Sans L", FreeSans, sans-serif;
+  padding: 8px 12px;
+  width: 190px;
+   -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 2px 2px 5px #e2e2e2, inset 2px 2px 5px #e2e2e2;
+  -moz-box-shadow: 2px 2px 5px #e2e2e2, inset 2px 2px 5px #e2e2e2;
+  box-shadow: 2px 2px 5px #e2e2e2, inset 2px 2px 5px #e2e2e2;
+  filter:progid:DXImageTransform.Microsoft.Shadow
+  (color=#e2e2e2, Direction=135, Strength=5);
+  -ms-filter:"progid:DXImageTransform.Microsoft.Shadow
+  (color=#e2e2e2, Direction=135, Strength=5)";
+}
+}
+textarea {
+  width: 425px;
+  overflow: auto;
+}
+input[type="submit"] {
+  background-color: #c50a1f;
+  color: #fff;
+  cursor: pointer;
+  font: italic bold 1em/1.2 Georgia, "Times New Roman ", Times, Cambria, "Nimbus Roman No9 L ", serif;
+  border: 1px solid #e35061;
+  padding: 5px 10px;
+  width: auto;
+  -webkit-border-radius:0;
+  -moz-border-radius:0;
+  border-radius: 0;
+    background: -moz-linear-gradient(top, #e1001a, #c50a1f);
+  background: -webkit-gradient(linear, left top, left bottom,
+  color-stop(0, #e1001a), color-stop(1, #c50a1f));
+  filter: progid:DXImageTransform.Microsoft.gradient
+  (startColorStr=#e1001a, EndColorStr=#c50a1f);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient
+  (startColorStr=#e1001a, EndColorStr=#c50a1f)";
+    -webkit-box-shadow: 1px 0 0 #c50a1f, -1px 0 0 #c50a1f,
+  0 1px 0 #c50a1f, 0 -1px 0 #c50a1f, 0 5px 10px -5px #666;
+  -moz-box-shadow: 1px 0 0 #c50a1f, -1px 0 0 #c50a1f,
+  0 1px 0 #c50a1f, 0 -1px 0 #c50a1f, 0 5px 10px -5px #666;
+  box-shadow: 1px 0 0 #c50a1f, -1px 0 0 #c50a1f,
+  0 1px 0 #c50a1f, 0 -1px 0 #c50a1f, 0 5px 10px -5px #666;
+  text-shadow: 1px 1px 3px #333;
+}
+input[type="submit"]:hover {
+  background: #c50a1f;
+  text-shadow: none;
+}
+
+/*---------------Formular ENDE--------------*/
 div.toolbar_handle:hover {
 	background-image: -webkit-gradient(
 		linear,
