@@ -273,9 +273,33 @@ left, right {
 }
 
 #middle {
-	padding: 30px;
+	padding: 50px;
 	margin: 0 200px 0 200px;
+	margin-top: 10px;
 	border: 1px solid #ddd;
+/*von css3.me hinzugefügter code*/
+	-moz-border-radius:5px 50px 5px 5px;
+	-webkit-border-radius:5px 50px 5px 5px;
+	border-radius:5px 50px 5px 5px;
+/*IE 7 AND 8 DO NOT SUPPORT BORDER RADIUS*/
+	-moz-box-shadow:1px 0px 8px 2px #000000;
+	-webkit-box-shadow:1px 0px 8px 2px #000000;
+	box-shadow:1px 0px 8px 2px #000000;
+	filter: progid:DXImageTransform.Microsoft.Shadow(strength=1, direction=90, color='#000000');
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(strength=1, Direction=90, Color='#000000')";
+/*Shadows look very different in IE (Only cardinal directions supported)*/
+/*INNER ELEMENTS MUST NOT BREAK THIS ELEMENTS BOUNDARIES*/
+/*Element should have a background-color*/
+/*All filters must be placed together*/
+/*IE 7 AND 8 DO NOT SUPPORT BLUR PROPERTY OF SHADOWS*/
+/*IE 7 AND 8 DO NOT SUPPORT SPREAD PROPERTY OF SHADOWS*/
+	opacity:0.64;
+	-ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=64);
+/*-ms-filter must come before filter*/
+	filter: alpha(opacity=64);
+/*INNER ELEMENTS MUST NOT BREAK THIS ELEMENTS BOUNDARIES*/
+/*All filters must be placed together*/
+
 }
 
 left {
