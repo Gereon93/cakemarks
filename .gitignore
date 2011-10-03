@@ -1,3 +1,4 @@
 .htaccess
 config/database.php
 tmp/
+webroot/.htaccess
