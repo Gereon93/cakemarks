@@ -7,9 +7,10 @@
 		<title><?php echo $title_for_layout; ?></title>
 	</head>
 	<body>
+
 		<div id="page">
 			<div id="logo">
-				<h1>Cakemarks</h1>
+				<img src="../../webroot/css/Cakemark.gif" width="500" height="100" />
 			</div>
 
 			<?php echo $this->Session->flash(); ?>
