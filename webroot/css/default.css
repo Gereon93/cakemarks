@@ -1,9 +1,14 @@
-/*--------------CSS RESET------------------*/
+/*--------------CSS Default/RESET------------------*/
 *{
     padding:0;/*innenabstand*/
     margin:0; /*aussenabstand*/
     font-size:100%;
     font-weight: normal;
+}
+a{
+
+	color:#505862;
+
 }
 ul,ol{
     list-style:none;
@@ -13,179 +18,176 @@ b,strong{
 }
 img, a img{
     border:none;
+
 }
-/*-------------CSS RESET ENDE-------------*/
-
-/*--------------CSS DEFAULT------------------*/
-    body {
-	/*background-color: #808080;
-	background: -webkit-gradient(linear, left center, right center, from(#808080), to(#808080), color-stop(.5,#FFFFFF));
-	background: -moz-linear-gradient(left, #808080 0%, #FFFFFF 50%, #808080 100%);*/
-	font-family: Helvetica, Arial, sans-serif;
-	margin: 10px, 10px, 1px, 10px;
-
+body {
+background-color: #6B6D72;
+font-family: Helvetica, Arial, sans-serif;
+margin: 10px, 10px, 1px, 10px;
+	
 }
 h1 {
 	font-size: 2.5em;
 }
 
 h2 {
+
 	font-size: 2.0em;
+	text-align:right;
+	margin-right: 5px;
+	margin-left: auto;
+
 }
 
 h3 {
 	font-size: 1.2em;
 	color: #505862;
 }
-/*-------------CSS DEFAULT ENDE--------------*/
-/*--------------FORMULAR DEFAULT------------------*/
-form {
-    margin-bottom:5px;
-    margin-top:10px;
+	#page{
+	background-color:#EFEFEF;
+	width:960px;
+    margin: 0 auto;
+
 }
-fieldset {
-  border: none;
-  margin-bottom: 10px;
-  padding: 10px 20px 25px;
-}
-fieldset legend {
-  font-weight: bold;
-  font-size: 22px;
-  margin:15px 0 0 6px;
+p{
+	text-align: center;
+	font-size: 0.8em;
+
 }
 
-label {
-  display: inline;
-  cursor: pointer;
-  font-weight: bold;
-  line-height: 24px;
-  margin-bottom: 15px;
-  width: 50px;
-}
-textarea {
-    margin-bottom: 15px;
-}
-title {
-    width:50px;
-}
-input, textarea {
-  background-color: #fff;
-  color: #4d4d4d;
-  border: 1px solid #c4c4c4;
-  font: 13px Helvetica, Arial, "Nimbus Sans L", FreeSans, sans-serif;
-  padding: 8px 12px;
-   -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  -webkit-box-shadow: 2px 2px 5px #e2e2e2, inset 2px 2px 5px #e2e2e2;
-  -moz-box-shadow: 2px 2px 5px #e2e2e2, inset 2px 2px 5px #e2e2e2;
-  box-shadow: 2px 2px 5px #e2e2e2, inset 2px 2px 5px #e2e2e2;
-  filter:progid:DXImageTransform.Microsoft.Shadow
-  (color=#e2e2e2, Direction=135, Strength=5);
-  -ms-filter:"progid:DXImageTransform.Microsoft.Shadow
-  (color=#e2e2e2, Direction=135, Strength=5)";
-}
-input {
- /*   float: right;*/
-                     
-    margin-left: 6px;
-                     
-                     
-    margin-bottom: 6px;
-                     
-                     
-    margin-right: 6px;
-                     
-                     
-    margin-top: 3px;
-                     
-                     
-    display: inline;
-                     
-    height: auto;
-}
-textarea {
-    position: absolute;
-    font-size: 11px;
-    height: 12px;
-    float: left;
-    
-}
-input[type="submit"] {
-  background-color: #c50a1f;
-  color: #fff;
-  cursor: pointer;
-  font: italic bold 1em/1.2 Georgia, "Times New Roman ", Times, Cambria, "Nimbus Roman No9 L ", serif;
-  border: 1px solid #e35061;
-  padding: 5px 10px;
-  width: auto;
-  height: auto;
-  -webkit-border-radius:0;
-  -moz-border-radius:0;
-  border-radius: 0;
-    background: -moz-linear-gradient(top, #e1001a, #c50a1f);
-  background: -webkit-gradient(linear, left top, left bottom,
-  color-stop(0, #e1001a), color-stop(1, #c50a1f));
-  filter: progid:DXImageTransform.Microsoft.gradient
-  (startColorStr=#e1001a, EndColorStr=#c50a1f);
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient
-  (startColorStr=#e1001a, EndColorStr=#c50a1f)";
-    -webkit-box-shadow: 1px 0 0 #c50a1f, -1px 0 0 #c50a1f,
-  0 1px 0 #c50a1f, 0 -1px 0 #c50a1f, 0 5px 10px -5px #666;
-  -moz-box-shadow: 1px 0 0 #c50a1f, -1px 0 0 #c50a1f,
-  0 1px 0 #c50a1f, 0 -1px 0 #c50a1f, 0 5px 10px -5px #666;
-  box-shadow: 1px 0 0 #c50a1f, -1px 0 0 #c50a1f,
-  0 1px 0 #c50a1f, 0 -1px 0 #c50a1f, 0 5px 10px -5px #666;
-  text-shadow: 1px 1px 3px #333;
-}
-input[type="submit"]:hover {
-  color: white;
-  background: #ff3621;
-  text-shadow: none;
-  text-align:center;
-}
+/*-------------CSS reset/DEFAULT ENDE--------------*/
 
-/*-------------FORMULAR DEFAULT ENDE--------------*/
 
-/*-------------QUICK ADD ENDE--------------*/
-/*--------------NORMAL ADD DEFAULT------------------*/
+/*-------------------------------------------
+<480px
+-------------------------------------------*/
+@media(max-width:480px){
+}
+/*-------------------------------------------
+<1680px later for 1680px now for 1024
+-------------------------------------------*/
+@media(min-width:1024px){
+#navigation{
 
-/*-------------NORMAL ADD ENDE--------------*/
-/*--------------QUOTES TABLE------------------*/
+	margin-bottom: 5px;
+	margin-top: -45px;
+
+}
+  #navigation ul li {
+  	border-top-color:#505862;
+
+	border-bottom-style: dashed;
+	border-bottom-color:#505862;
+	border-top-style: dashed;
+    margin-left: 27px;
+    margin-bottom: 1.4em;
+    margin-right: 0.4em;
+    margin-top: 1.4em;
+    display: inline; padding: 0;
+  }
+  #navigation a{
+  		    text-decoration: none;
+  }
+
+
+
+#content{
+display: inline;
+padding:0;
+}
+.bookmarkbox{
+	margin:0 auto;
+	width: 280px;
+	display: inline-block;
+}
+.bookmarkbox a{
+	color: #f8ad1e;
+}
+.keyword_tree ul li{
+display: inline;
+}
 table {
-font-size: 15px;
-width: 90%;
+	font-size: 15px;
+	width: 90%;
 }
-table td, table th {
-padding: 2px 10px;
-/*border: 1px solid #000;     - WITHOUT BORDER*/
+	table td, table th {
+		padding: 2px 10px;
+		/*border: 1px solid #000;     - WITHOUT BORDER*/
 }
-table th {
-background-color: #666;
-color: #fff;
+	table th {
+		background-color: #666;
+		color: #fff;
 }
-table tr:nth-child(1n+2) {
-background-color: #FEFEFE;
-color: #000;
+	table tr:nth-child(1n+2) {
+		background-color: #FEFEFE;
+		color: #000;
 }
-table tr:nth-child(2n+3) {
-background-color: #EEEEEE;
-color: #000;
+	table tr:nth-child(2n+3) {
+		background-color: #EEEEEE;
+		color: #000;
 }
-table tr:hover {
-background-color: #808080;
-color: #fff;
+	table tr:hover {
+		background-color: #808080;
+		color: #fff;
 }
-th a {
-    text-decoration: none;
+	th a {
+	    text-decoration: none;
 }
-th a:link {
-    color:#EEFFEE;
+	th a:link {
+	    color:#EEFFEE;
 }
-th a:visited {
-    color: #DDDDDD;
+	th a:visited {
+	    color: #DDDDDD;
 }
-th a:active {
-    color: #72aeeb;
+	th a:active {
+	    color: #72aeeb;
 }
-/*-------------QUOTES TABLE ENDE--------------*/
+
+
+}
+/*-------------------------------------------
+<960px landscape / portrait 
+-------------------------------------------*/
+@media(max-width:960px){
+ 
+table {
+	font-size: 15px;
+	width: 90%;
+}
+	table td, table th {
+		padding: 2px 10px;
+		/*border: 1px solid #000;     - WITHOUT BORDER*/
+}
+	table th {
+		background-color: #666;
+		color: #fff;
+}
+	table tr:nth-child(1n+2) {
+		background-color: #FEFEFE;
+		color: #000;
+}
+	table tr:nth-child(2n+3) {
+		background-color: #EEEEEE;
+		color: #000;
+}
+	table tr:hover {
+		background-color: #808080;
+		color: #fff;
+}
+	th a {
+	    text-decoration: none;
+}
+	th a:link {
+	    color:#EEFFEE;
+}
+	th a:visited {
+	    color: #DDDDDD;
+}
+	th a:active {
+	    color: #72aeeb;
+}
+
+}
+
+
+
