@@ -10,7 +10,7 @@
 
 		<div id="page">
 			<div id="logo">
-				<img src="../../webroot/css/Cakemark.gif" width="500" height="100" />
+				<img src="gfx/Cakemark.png" width="500" height="100" />
 			</div>
 
 			<?php echo $this->Session->flash(); ?>
