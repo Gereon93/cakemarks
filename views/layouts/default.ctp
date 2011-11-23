@@ -1,6 +1,7 @@
 <?php /* Copyright (c) 2011 Martin Ueding <dev@martin-ueding.de> */ ?>
 <!doctype html>
 	<head>
+		<meta name="viewport" content="initial-scale=1.0, width=device-width">
 		<?php echo $this->Html->charset(); ?>
 		<?php echo $this->Html->css('default'); ?>
 
@@ -9,14 +10,12 @@
 	<body>
 
 		<div id="page">
-			<div id="logo">
-				<img src="gfx/Cakemark.png" width="500" height="100" />
-			</div>
-
 			<?php echo $this->Session->flash(); ?>
-
+			
+			<div id="header">
+			<img src="gfx/Cakemark.png" width="500" height="100" />
 			<?php echo $this->element('navigation'); ?>
-
+			</div>
 			<?php echo $content_for_layout; ?>
 
 			<?php echo $this->element('quote'); ?>

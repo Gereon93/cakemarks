@@ -62,13 +62,22 @@ p{
 <480px
 -------------------------------------------*/
 @media(max-width:480px){
+img{display: none!important;}
+edit_option{display: none;}
+.bookmark_view onclick{ display:none;}
 }
 /*-------------------------------------------
 <1680px later for 1680px now for 1024
 -------------------------------------------*/
 @media(min-width:1024px){
-#navigation{
+/*
+#header{
+	position:  fixed;
 
+}
+*/
+
+#navigation{
 	margin-bottom: 5px;
 	margin-top: -45px;
 
@@ -88,8 +97,13 @@ p{
   #navigation a{
   		    text-decoration: none;
   }
+  #navigation a:active{ color: #f8ad1e }
+  #navigation a:visited{ color: #0000EE;}
+  #navigation a:hover{color: #00AA00;}
 
-
+#page{
+position: relative;
+}
 
 #content{
 display: inline;
