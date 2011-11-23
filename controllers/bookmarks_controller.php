@@ -7,6 +7,11 @@ class BookmarksController extends AppController {
 	var $uses = array('Bookmark', 'Visit', 'Quote', 'Keyword');
 	var $helpers = array('Time');
 
+	/**
+	 * Lists all bookmarks.
+	 *
+	 * @author Martin Ueding <dev@martin-ueding.de>
+	 */
 	function index() {
 		$this->Bookmark->recursive = 0;
 		$this->set('bookmarks', $this->paginate());
@@ -64,6 +69,8 @@ class BookmarksController extends AppController {
 		$url = str_replace("__slash__", "/", $url);
 		$url = str_replace("__colon__", ":", $url);
 		$url = str_replace("__hash__", "#", $url);
+		$url = str_replace("__ques__", "?", $url);
+		$url = str_replace("__amp__", "&", $url);
 		return $url;
 	}
 
@@ -210,6 +217,98 @@ class BookmarksController extends AppController {
 			$to_url = "http://".$to_url;
 		}
 		$this->redirect($to_url);
+	}
+
+	function export() {
+		header('Content-type: application/json');
+		$this->layout = 'ajax';
+		$bookmarks = $this->Bookmark->find('all');
+		foreach ($bookmarks as $bookmark) {
+			$current['title'] = $bookmark['Bookmark']['title'];
+			$current['url'] = $bookmark['Bookmark']['url'];
+
+			foreach ($bookmark['Keyword'] as $keyword) {
+				$keywords[] = $keyword['title'];
+			}
+			if (isset($keywords)) {
+				$current['keywords'] = $keywords;
+			}
+
+			$data[] = $current;
+			unset($current);
+			unset($keywords);
+		}
+		$this->set("data", json_encode($data));
+	}
+
+	function import() {
+		$this->import_result['added_bookmarks'] = 0;
+		$this->import_result['added_keywords'] = 0;
+		$this->import_result['existing_bookmarks'] = 0;
+		$this->import_result['existing_keywords'] = 0;
+
+		if (isset($this->data['Bookmark']['json'])) {
+			$this->_import(json_decode($this->data['Bookmark']['json'], true));
+			$this->set('show_results', true);
+		}
+
+		$this->set('show_form', true);
+		$this->set('import_result', $this->import_result);
+	}
+
+	/**
+	 * Takes an array with the format specified in the import/export document.
+	 * Each bookmark is created if it does not exist, keywords are attached to
+	 * it.
+	 *
+	 * @param input array Bookmarks and Keywords to be imported
+	 * @author Martin Ueding <dev@martin-ueding.de>
+	 */
+	function _import($input) {
+		if (!isset($input) || empty($input) || count($input) == 0) {
+			return;
+		}
+		foreach ($input as $bookmark) {
+			# Build a CakePHP style array.
+			$q['Bookmark']['title'] = $bookmark['title'];
+			$q['Bookmark']['url'] = $bookmark['url'];
+			foreach ($bookmark['keywords'] as $keyword) {
+				$db_keyword = $this->Keyword->find('first', array(
+					'conditions' => array(
+						'Keyword.title' => $keyword)
+					));
+
+				if (isset($db_keyword['Keyword']['id'])) {
+					$q['Keyword'][] = $db_keyword['Keyword']['id'];
+					$this->import_result['existing_keywords']++;
+				}
+				else {
+					$this->Keyword->save(array('title' => $keyword));
+					$q['Keyword'][] = $this->Keyword->id;
+					$this->import_result['added_keywords']++;
+				}
+			}
+
+			# Check whether this title/url combination already exists.
+			$count = $this->Bookmark->find('count', array(
+				'conditions' => array(
+					'Bookmark.title' => $q['Bookmark']['title'],
+					'Bookmark.url' => $q['Bookmark']['url'],
+				)
+			));
+
+			# Go to the next bookmark if this already exists.
+			if ($count > 0) {
+				$this->import_result['existing_bookmarks']++;
+				continue;
+			}
+
+			# Add bookmark to the database.
+			$this->Bookmark->save($q);
+			$this->import_result['added_bookmarks']++;
+
+			unset($q);
+		}
 	}
 }
 ?>
