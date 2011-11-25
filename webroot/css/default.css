@@ -66,6 +66,7 @@ p{
 /*-------------------------------------------
 <480px
 -------------------------------------------*/
+ /*Block export and import function */
 @media(max-width:480px){
 img{display: none!important;}
 edit_option{display: none;}
@@ -75,21 +76,33 @@ edit_option{display: none;}
 <1680px later for 1680px now for 1024
 -------------------------------------------*/
 @media(min-width:1024px){
-
+#page{
+	width: 1024px;
+}
 #header{
 	margin-top: -140px;
 	background-color: white;
 	position:  fixed;
-	
-	width: 960px;
-	
+	background-color:#ffffff;
+	border-width:3px;
+	border-color:#999999;
+	-moz-box-shadow:0px 0px 10px #000000;
+	-webkit-box-shadow:0px 0px 10px #000000;
+	box-shadow:0px 0px 10px #000000;
+	width: 1024px;	
+}
+#header h2{
+	display: none;
 }
 
 
 
+
 #navigation{
+	padding-right: 0.5em;
+	padding-left: 0.5em;
 	margin-bottom: 5px;
-	margin-top: -45px;
+	margin-top: 5px;
 
 }
   #navigation ul li { 
@@ -98,14 +111,14 @@ edit_option{display: none;}
 	border-bottom-style: dashed;
 	border-bottom-color:#505862;
 	border-top-style: dashed;
-    margin-left: 25px;
-    margin-bottom: 1.4em;
-    margin-right: 0.4em;
-    margin-top: 1.4em;
+    margin-left: 0.3em;
+    margin-bottom: 2em;
+    margin-right: 0.3em;
+    margin-top: 2.5em;
     display: inline; padding: 0;
   }
  #navigation a{
-  		    text-decoration: none;
+  text-decoration: none;
   }
   #navigation a:active{ color: #f8ad1e }
   #navigation a:visited{ color: #0000EE;}
@@ -185,7 +198,7 @@ table {
 <960px landscape / portrait 
 -------------------------------------------*/
 @media(max-width:960px){
- 
+ /*Block export and import function */
 table {
 	font-size: 15px;
 	width: 90%;
