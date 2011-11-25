@@ -99,8 +99,8 @@ edit_option{display: none;}
 
 
 #navigation{
-	padding-right: 0.5em;
-	padding-left: 0.5em;
+	padding-right: 0.1em;
+	padding-left: 0.1em;
 	margin-bottom: 5px;
 	margin-top: 5px;
 
@@ -127,6 +127,9 @@ edit_option{display: none;}
 
 
 .bookmarkbox{
+
+	float: left;
+
 	margin:0 auto;
 	width: 280px;
 	display: inline-block;
@@ -189,9 +192,11 @@ display: none;
 }
 
 #quickadd label{
+margin-bottom: 0.2em;
 	float: left;
 }
 #quickadd input{
+	margin-bottom: 0.2em;
 	float:right;
 }
 #quickadd input, textarea { 		
@@ -199,10 +204,12 @@ display: none;
     color: #555; 
     border: 1px #ddd solid;
 }
-#quickadd .submit { 	 
+
+#quickadd input.submit { 	 
+	width: 200px;
     color: #eee; 
     text-transform: uppercase; 
-    margin-top: 10px;
+    margin-top: 15px;
     background-color: #18a5cc;
     border: none;
     /* -- CSS3 Transition - define which property to animate (i.e. the shadow)  -- */
@@ -217,14 +224,17 @@ display: none;
 	-moz-border-radius: 4px; 
 	border-radius: 4px;
 }
-#quickadd .submit:hover { 		
+#quickadd input.submit:hover { 	
+
     -webkit-box-shadow: 0px 0px 20px #555;
     -moz-box-shadow: 0px 0px 20px #aaa; 
     box-shadow: 0px 0px 20px #555;		
     cursor:  pointer; 
 }
 
-
+.input.select{
+	display: inline-table;
+}
 
 
 /*table*/
@@ -265,9 +275,19 @@ table {
 	th a:active {
 	    color: #72aeeb;
 }
-
-
+/*QUOTE*/
+#quote{
+padding-bottom: 5px;
+padding-top: 5px;
+color:white;
+background-color: #6b6d72;
 }
+#quote h2{
+	display: none;
+}
+
+
+
 /*-------------------------------------------
 <960px landscape / portrait 
 -------------------------------------------*/

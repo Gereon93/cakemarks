@@ -16,9 +16,8 @@
 			<img src="gfx/Cakemark.png" width="500" height="100" />
 			<?php echo $this->element('navigation'); ?>
 			</div>
-			<?php echo $content_for_layout; ?>
-
 			<?php echo $this->element('quote'); ?>
+			<?php echo $content_for_layout; ?>
 
 			<div id="keyword_tree">
 				<h2><?php __('Keywords'); ?></h2>
