@@ -3,7 +3,7 @@
 <div id="navigation">
 	<h2><?php __('Navigation'); ?></h2>
 	<ul>
-		<li><?php echo $this->Html->link(__('Home Page', true),
+		<li><?php echo $this->Html->link(__('Home', true),
 			array('controller' => 'bookmarks', 'action' => 'startscreen')); ?>
 		</li>
 		<li><?php echo $this->Html->link(__('New Bookmark', true),
