@@ -127,11 +127,10 @@ edit_option{display: none;}
 
 
 .bookmarkbox{
-
 	float: left;
 
-	margin:0 auto;
-	width: 280px;
+
+	width: 330px;
 	display: inline-block;
 }
 .bookmarkbox a{
@@ -154,10 +153,14 @@ display:;
 	text-align: center;
 	display: inline-block;
 	margin-left: 0.5em;
-	margin-right: 0.5em;
-	
-	
+	margin-right: 0.5em;	
 }
+#keyword_tree ul li ul li{
+	color:blue;
+
+}
+
+
 /*QUICK ADD*/
 #quickadd h2{
 display: none;
