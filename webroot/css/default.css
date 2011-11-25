@@ -33,7 +33,7 @@ h1 {
 h2 {
 
 	font-size: 2.0em;
-	text-align:right;
+	text-align:center;
 	margin-right: 5px;
 	margin-left: auto;
 
@@ -137,9 +137,10 @@ edit_option{display: none;}
 
 
 #keyword_tree {
+display:;
 	text-transform: uppercase;
 	margin:0 auto;
-	width: 900px;
+	width: 1024px:
 }
 
 #keyword_tree a{
@@ -147,13 +148,86 @@ edit_option{display: none;}
 }
 
 #keyword_tree ul li{
-
-	display: inline;
-	margin-left: 5px;
-	margin-right: 5px
+	text-align: center;
+	display: inline-block;
+	margin-left: 0.5em;
+	margin-right: 0.5em;
 	
 	
 }
+/*QUICK ADD*/
+#quickadd h2{
+display: none;
+}
+
+#quickadd form { 
+	display: inline-block; 
+	width: 200px;
+ 	float left;
+    border: 1px solid #ddd; 
+    padding: 30px 40px 20px 40px; 
+    background: #fff;
+    
+    /* -- CSS3 - define rounded corners -- */	
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px; 
+	border-radius: 10px;
+ 
+	/* -- CSS3 - create a background gradient -- */
+	background: -webkit-gradient(linear, 0% 0%, 0% 40%, from(#EEE), to(#FFF)); 
+	background: -moz-linear-gradient(0% 40% 90deg,#FFF, #EEE); 
+ 
+	/* -- CSS3 - add a drop shadow -- */
+	-webkit-box-shadow:0px 0 50px #ccc;
+	-moz-box-shadow:0px 0 50px #ccc; 
+	box-shadow:0px 0 50px #ccc;
+ 
+}
+}
+#quickadd{
+	width: 250px;
+}
+
+#quickadd label{
+	float: left;
+}
+#quickadd input{
+	float:right;
+}
+#quickadd input, textarea { 		
+    background: #fff;  
+    color: #555; 
+    border: 1px #ddd solid;
+}
+#quickadd .submit { 	 
+    color: #eee; 
+    text-transform: uppercase; 
+    margin-top: 10px;
+    background-color: #18a5cc;
+    border: none;
+    /* -- CSS3 Transition - define which property to animate (i.e. the shadow)  -- */
+	-webkit-transition: -webkit-box-shadow 0.3s linear;
+ 
+	/* -- CSS3 Shadow - create a shadow around each input element -- */ 
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#18a5cc), to(#0a85a8)); 
+	background:  -moz-linear-gradient(25% 75% 90deg,#0a85a8, #18a5cc); 
+ 
+	/* -- CSS3 - Rounded Corners -- */
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px; 
+	border-radius: 4px;
+}
+#quickadd .submit:hover { 		
+    -webkit-box-shadow: 0px 0px 20px #555;
+    -moz-box-shadow: 0px 0px 20px #aaa; 
+    box-shadow: 0px 0px 20px #555;		
+    cursor:  pointer; 
+}
+
+
+
+
+/*table*/
 table {
 	font-size: 13px;
 	width: 900px;
