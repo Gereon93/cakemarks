@@ -13,7 +13,7 @@
 			<?php echo $this->Session->flash(); ?>
 			
 			<div id="header">
-			<img src="gfx/Cakemark.png" width="500" height="100" />
+			<?php echo $this->Html->image('cakemarks.png'); ?>
 			<?php echo $this->element('navigation'); ?>
 			</div>
 			<?php echo $this->element('quote'); ?>
