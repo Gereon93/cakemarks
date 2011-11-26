@@ -13,7 +13,6 @@
 			<?php echo $this->Session->flash(); ?>
 			
 			<div id="header">
-			<?php echo $this->Html->image('cakemarks.png'); ?>
 			<?php echo $this->element('navigation'); ?>
 			</div>
 			<?php echo $this->element('quote'); ?>
