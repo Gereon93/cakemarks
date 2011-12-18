@@ -19,9 +19,6 @@ body {
 	font-size: 13px;
 	line-height: 140%;
 }
-#page {
-	background-color: #eee;
-}
 
 /*****************************************************************************/
 /*                              Main Containers                              */
@@ -35,18 +32,17 @@ body {
 	text-align: center;
 }
 #navigation, #actions {
-	margin: 0px auto 10px auto;
+	margin-bottom: 10px;
 	overflow: hidden;
-	margin-left: 20px;
 	h2 {
 		display: none;
 	}
 	li {
-		float: left;
 		list-style: none;
 		a {
 			color: $foreground_light;
 			display: block;
+			float: left;
 			padding: 2px 5px;
 			text-decoration: none;
 			&:hover {
@@ -74,18 +70,7 @@ body {
 	background-color: #fff;
 	box-shadow: 5px 5px 10px #777;
 	margin-bottom: 20px;
-	margin-left: 20px;
-	margin-right: 20px;
 	padding: 10px 10px;
-}
-#content {
-	overflow: hidden;
-	div.bookmarkbox {
-		box-shadow: 1px 1px 5px #aaa;
-		float: left;
-		margin: 5px;
-		padding: 3px;
-	}
 }
 #logo {
 	display: none;
@@ -101,9 +86,7 @@ body {
 	}
 }
 #keyword_tree {
-	float: left;
 	text-overflow: ellipsis;
-	width: 200px;
 	li {
 		list-style: none;
 
@@ -119,16 +102,6 @@ body {
 				text-decoration: underline;
 			}
 		}
-	}
-}
-#sticky_keywords {
-	overflow: hidden;
-	margin-left: 280px;
-
-	div.sticky_keyword {
-		float: left;
-		margin: 3px;
-		padding: 3px;
 	}
 }
 #quickadd {
@@ -196,18 +169,72 @@ h3 {
 }
 
 /*****************************************************************************/
-/*                                  Netbook                                  */
-/*****************************************************************************/
-
-@media(max-width:1024px) {
-}
-
-/*****************************************************************************/
-/*                                Smartphones                                */
+/*                                Smartphone                                 */
 /*****************************************************************************/
 
 @media(max-width:480px) {
-	#quote {
+	#navigation, #actions {
+		li {
+			background-color: none;
+			a {
+				display: block;
+				border-radius: 5px;
+				width: 45%;
+				margin: 2px;
+			}
+		}
+	}
+	#quote, #stats, #quickadd {
 		display: none;
+	}
+}
+
+/*****************************************************************************/
+/*                          bigger than Smartphone                           */
+/*****************************************************************************/
+
+@media(min-width:481px) {
+	#navigation, #actions {
+		margin-left: 20px;
+	}
+	#quickadd, #stats {
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+	#content {
+		overflow: hidden;
+		div.bookmarkbox {
+			box-shadow: 1px 1px 5px #aaa;
+			float: left;
+			margin: 5px;
+			padding: 3px;
+		}
+	}
+	#keyword_tree {
+		float: left;
+		width: 200px;
+	}
+	#sticky_keywords {
+		margin-left: 240px;
+		overflow: hidden;
+		div.sticky_keyword {
+			float: left;
+			margin: 3px;
+			padding: 3px;
+		}
+	}
+}
+
+/*****************************************************************************/
+/*                            bigger than NetBook                            */
+/*****************************************************************************/
+
+@media(min-width:1050px) {
+	#content, #quote, #keyword_tree, #sticky_keywords {
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+	#sticky_keywords {
+		margin-left: 280px;
 	}
 }
